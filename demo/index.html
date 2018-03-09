@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>R6PasswordHint demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="R6PasswordHint.css" />
+</head>
+<body>
+
+    <div class="callout large primary">
+        <div class="row column text-center">
+            <h4>Demo page create with Zurb Foundation 6</h4>
+            <h6>R6PasswordHint</h6>
+        </div>
+
+        <div class="grid-x">
+            <div class="cell small-4 large-offset-4">            
+                <input type="password" id="password">
+            
+                <div id="R6PasswordHint-password">
+                    <div>Password should contains: </div>
+                    <div class="js-R6PasswordHint-bigLetter">one big letter</div>
+                    <div class="js-R6PasswordHint-smallLetter">two small letters</div>
+                    <div class="js-R6PasswordHint-digit">3 numbers</div>
+                    <div class="js-R6PasswordHint-lengthBetween">8 to 16 characters</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../dist/R6PasswordHint.min.js"></script>
+    <script>
+        new R6PasswordHint({
+            inputField: document.querySelector("#password"),
+            rules: {
+                smallLetter: 2,
+                bigLetter: 1,
+                digit: 3,
+                lengthBetween: [8, 16]
+            }
+        });
+    </script>
+</body>
+</html>

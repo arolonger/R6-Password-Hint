@@ -1,3 +1,5 @@
 # R6-Password-Hint
 
-I hope that finally I could commit sth ;-)
+A dependency-free vanilla JS password hinter for improving users experiance inspired by allegro.pl
+
+Complete guide - soon
