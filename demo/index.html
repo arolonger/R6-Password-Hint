@@ -12,12 +12,11 @@
 
     <div class="callout large primary">
         <div class="row column text-center">
-            <h4>Demo page create with Zurb Foundation 6</h4>
-            <h6>R6PasswordHint</h6>
+            <h4>R6PasswordHint example</h4>
         </div>
 
         <div class="grid-x">
-            <div class="cell small-4 large-offset-4">            
+            <div class="cell small-12 large-4 large-offset-4">            
                 <input type="password" id="password">
             
                 <div id="R6PasswordHint-password">
@@ -33,7 +32,7 @@
 
     <script src="../dist/R6PasswordHint.min.js"></script>
     <script>
-        new R6PasswordHint({
+        const passwordHintInstance = new R6PasswordHint({
             inputField: document.querySelector("#password"),
             rules: {
                 smallLetter: 2,
@@ -42,6 +41,8 @@
                 lengthBetween: [8, 16]
             }
         });
+
+        passwordHintInstance.isValid();
     </script>
 </body>
 </html>
